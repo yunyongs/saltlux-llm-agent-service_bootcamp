@@ -1,15 +1,14 @@
 package lecture.section01.method;
 
-public class Application1 {
+public class Application2 {
 
     public static void main(String[] args) {
 
         System.out.println("Main Method implemented...");
-        Application1 app1 = new Application1(); // create a class
+        Application2 app1 = new Application2(); // create a class
 
         app1.methodA(); //methodA calling
-        app1.methodB();
-        app1.methodC();
+
 
         System.out.println("Main Method closed...");
 
@@ -18,6 +17,8 @@ public class Application1 {
     public void methodA() {
 
         System.out.println("methodA() calling...");
+        methodB();
+        System.out.println("MethodA() closed...");
 
         return;
 
@@ -25,6 +26,8 @@ public class Application1 {
     public void methodB() {
 
         System.out.println("methodB() calling...");
+        methodC();
+        System.out.println("MethodB() closed...");
 
         return;
 
@@ -32,6 +35,7 @@ public class Application1 {
     public void methodC() {
 
         System.out.println("methodC() calling...");
+        System.out.println("MethodC() closed...");
 
         return;
 

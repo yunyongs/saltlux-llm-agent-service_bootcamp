@@ -1,51 +1,30 @@
 package lecture.section01.method;
 import java.util.Scanner;
 
-public class Application5 {
+public class Application6 {
 
 
     public static void main(String[] args) {
-        Application5 app4 = new Application5();
-        System.out.println("첫번째 정수: ");
-        Scanner scX = new Scanner(System.in);
-        int x = scX.nextInt();
-        System.out.println("두번째 정수: ");
-        Scanner scY = new Scanner(System.in);
-        int y = scY.nextInt();
-        
+        Application6 app6 = new Application6();
 
-    System.out.println("sum = " + app4.add(x, y));
-    System.out.println("sub = " + app4.subtract(x, y));
-    System.out.println("mul = " + app4.multiply(x, y));
-    System.out.println("div = " + (float) app4.divide(x, y));
+
+         System.out.println(sum(5, 6)); //static 매소드의 경우, 객체를 생성하지 않고 메소드 자체를 사용할 수 있다.
+         System.out.println(Application6.sum(5, 6)); //static 매소드의 경우, 객체를 생성하지 않고 메소드 자체를 사용할 수 있다.
+
+
 
 
 
     }
 
 
-    // 두 수를 받아 더하는 메소드
-    // 두 수를 받아 빼는 메소드
-    // 두 수를 받아 곱하는 메소드
-    // 두 수를 받아 나누는(몫) 메소드, 실수 형태
-    public int add (int x, int y) {
-
-        return x+y;
-    }
-    public int subtract (int x, int y) {
-
-        return x-y;
-    }
-    public int multiply (int x, int y) {
-
-        return x*y;
-    }
-    public int divide (int x, int y) {
-        if (y != 0) {
-            return  x / y;
-        } else {
-            return 0;
-        }
+    public static int sum(int x, int y) {
+        return x + y;
 
     }
+    public int subtract(int x, int y) {
+        return x - y;
+
+    }
+
 }

@@ -1,31 +1,47 @@
 package lecture.section01.method;
+import java.util.Scanner;
 
-public class Application4 {
+public class Application5 {
 
-    /*
-    * return : 현재 메소드를 종료하고 호출한 구문으로 돌아가라는 명령
-    * */
+
     public static void main(String[] args) {
-        Application4 app4 = new Application4();
-//        app4.testMethod();
-        String greeting = app4.sayHello();
-        System.out.println(greeting);
+        Application5 app4 = new Application5();
+        System.out.println("첫번째 정수: ");
+        Scanner scX = new Scanner(System.in);
+        int x = scX.nextInt();
+        System.out.println("두번째 정수: ");
+        Scanner scY = new Scanner(System.in);
+        int y = scY.nextInt();
 
+    System.out.println("sum = " + app4.add(x, y));
+    System.out.println("sub = " + app4.subtract(x, y));
+    System.out.println("mul = " + app4.multiply(x, y));
+    System.out.printf("div = %.4f%n" + app4.divide(x, y));
     }
 
-    public void testMethod() {
-        System.out.println("테스트 동작 확인1");
-        return;
-//        System.out.println("테스트 동작 확인1");
 
+    // 두 수를 받아 더하는 메소드
+    // 두 수를 받아 빼는 메소드
+    // 두 수를 받아 곱하는 메소드
+    // 두 수를 받아 나누는(몫) 메소드, 실수 형태
+    public int add (int x, int y) {
 
+        return x+y;
     }
+    public int subtract (int x, int y) {
 
-    // 문자열을 반환
-    // 접근제어자 뒤에 반환할 타입을 명시해야 한다.
-    // 아무것도 반환하지 않을 때는 void
-    public String sayHello () {
-        String hello = "Hello Java";
-        return hello;
+        return x-y;
+    }
+    public int multiply (int x, int y) {
+
+        return x*y;
+    }
+    public double divide (int x, int y) {
+        if (y != 0) {
+            return  (double) x / y;
+        } else {
+            return 0;
+        }
+
     }
 }
